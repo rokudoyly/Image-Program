@@ -8,17 +8,11 @@ For the class MIMZ03 final project.  **DO NOT** include all the code in my proje
 git clone https://github.com/rokudoyly/mimz03.git
 ```
 
-### classification
-
-------
+# Classification
 
 Including ***two*** parts: 
 
-#### SVM part
-
-------
-
-
+## SVM part
 
 ##### Prerequisites:
 
@@ -32,9 +26,7 @@ python svm_class.py
 
 <u>**(option)**</u> **Data augmentation and split data in** `data_augmentation.py` and  `split_data.py` 
 
-#### transformer
-
-------
+## transformer
 
 Include ViT-Base.
 
@@ -42,15 +34,11 @@ ViT network architecture:
 
 ![vit](./readme/vit.png)
 
-### crawling
-
-------
+# Crawling
 
 Including ***two*** parts: 
 
-#### papers
-
-------
+## papers
 
 **Prerequisites:**
 
@@ -66,9 +54,7 @@ python crawling.py
 python crawling_pooling.py
 ```
 
-#### images
-
-------
+## images
 
 **Prerequisites:**
 
@@ -80,11 +66,7 @@ python crawling_img.py
 
 The default crawling number of images is 1 (each class).
 
-### Citations
-
-------
-
-
+## Citations
 
 ```
 @article{dosovitskiy2020image,
@@ -95,9 +77,7 @@ The default crawling number of images is 1 (each class).
 }
 ```
 
-### License
-
-------
+## License
 
 This project is open sourced under MIT license.
 
