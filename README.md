@@ -32,7 +32,7 @@ Include ViT-Base.
 
 ViT network architecture:
 
-![vit](E:\pythonhmk\mimz03\readme\vit.png)
+![vit](./readme/vit.png)
 
 ### crawling
 
@@ -68,12 +68,14 @@ The default crawling number of images is 1 (each class).
 
 ### Citations
 
+```
 @article{dosovitskiy2020image,
   title={An image is worth 16x16 words: Transformers for image recognition at scale},
   author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and others},
   journal={arXiv preprint arXiv:2010.11929},
   year={2020}
 }
+```
 
 ### License
 
