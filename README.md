@@ -10,9 +10,15 @@ git clone https://github.com/rokudoyly/mimz03.git
 
 ### classification
 
+------
+
 Including ***two*** parts: 
 
 #### SVM part
+
+------
+
+
 
 ##### Prerequisites:
 
@@ -28,6 +34,8 @@ python svm_class.py
 
 #### transformer
 
+------
+
 Include ViT-Base.
 
 ViT network architecture:
@@ -36,9 +44,13 @@ ViT network architecture:
 
 ### crawling
 
+------
+
 Including ***two*** parts: 
 
 #### papers
+
+------
 
 **Prerequisites:**
 
@@ -56,6 +68,8 @@ python crawling_pooling.py
 
 #### images
 
+------
+
 **Prerequisites:**
 
 **Running crawling images:**
@@ -68,6 +82,10 @@ The default crawling number of images is 1 (each class).
 
 ### Citations
 
+------
+
+
+
 ```
 @article{dosovitskiy2020image,
   title={An image is worth 16x16 words: Transformers for image recognition at scale},
@@ -78,6 +96,8 @@ The default crawling number of images is 1 (each class).
 ```
 
 ### License
+
+------
 
 This project is open sourced under MIT license.
 
