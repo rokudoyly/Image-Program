@@ -2,6 +2,10 @@
 ### ATTENTION:
 For the class MIMZ03 final project.  **DO NOT** include all the code in my project. 
 
+```text
+![decription](https://img.shields.io/badge/tools-pycharm-blue) ![decription](https://img.shields.io/badge/tools-jupyter-blue)
+```
+
 **Clone the Code Repository**
 
 ```python
