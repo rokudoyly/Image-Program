@@ -11,6 +11,7 @@ def find_img(url):
     try:
         html = requests.get(url, allow_redirects=False)
     except error.HTTPError as e:
+        logging.error('Connect error')
         return
     else:
         html.encoding = 'utf-8'
@@ -26,21 +27,21 @@ def find_img(url):
 def dowmload(html, name, numimg):
     num = 0
     pic_url = re.findall('"objURL":"(.*?)",', html, re.S)  # 先利用正则表达式找到图片url
-    for img in pic_url:
+    for url in pic_url:
         try:
-            if img is not None:
-                pic = requests.get(img, timeout=7)
+            if url is not None:
+                img = requests.get(url, timeout=7)
             else:
                 continue
         except BaseException:
-            logging.error('Download image unsucessefully')
+            logging.error('Download image unsuccessefully')
             continue
         else:
             string = name + r'\\' + name + str(num) + '.jpg'
             fp = open(string, 'wb')
-            fp.write(pic.content)
+            fp.write(img.content)
             fp.close()
-            logging.info('Sucesseful download No. %s %s image... '%(str(num+1), name))
+            logging.info('Successeful download No. %s %s image... ' % (str(num+1), name))
             num += 1
         if num >= numimg:
             return
@@ -79,5 +80,5 @@ if __name__ == '__main__':
                 dowmload(result.text, str(name), num)
                 count = count + 60
 
-    print('All images download sucessefully!')
+    print('All images download successefully!')
     print()
