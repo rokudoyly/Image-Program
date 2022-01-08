@@ -6,11 +6,16 @@ import random
 from tqdm import tqdm
 import string
 # Data Augmentation
-def is_image_file(filename):  #
+def is_image_file(filename):
+    """ Judge whether is an image file.
+        Include png, jpg, jpeg, tif, tiff
+    """
     return any(filename.endswith(extension) for extension in [".png", ".jpg", ".jpeg", ".tif", ".tiff"])
 
 
 def is_damaged(cvimage):
+    """ Judge whether image is damaged.
+    """
     height, weight, channel = cvimage.shape
     one_channel = np.sum(cvimage, axis=2)
     white_pixel_count = len(one_channel[one_channel == 255 * 3])  # Count the number of white pixels
@@ -20,12 +25,16 @@ def is_damaged(cvimage):
 
 
 def gamma_transform(img, gamma):
+    """ Gamma transform.
+    """
     gamma_table = [np.power(x / 255.0, gamma) * 255.0 for x in range(256)]
     gamma_table = np.round(np.array(gamma_table)).astype(np.uint8)
     return cv2.LUT(img, gamma_table)
 
 
 def random_gamma_transform(img, gamma_vari):
+    """ Random Gamma transform.
+    """
     log_gamma_vari = np.log(gamma_vari)
     alpha = np.random.uniform(-log_gamma_vari, log_gamma_vari)
     gamma = np.exp(alpha)
@@ -33,6 +42,8 @@ def random_gamma_transform(img, gamma_vari):
 
 
 def rotate(xb, yb, angle):
+    """ Rotation.
+    """
     M_rotate = cv2.getRotationMatrix2D((img_w / 2, img_h / 2), angle, 1)
     xb = cv2.warpAffine(xb, M_rotate, (img_w, img_h))
     if yb is not None:
@@ -41,11 +52,15 @@ def rotate(xb, yb, angle):
 
 
 def blur(img):
+    """ Blur.
+    """
     img = cv2.blur(img, (3, 3))
     return img
 
 
 def add_noise(img):
+    """ Random noisy.
+    """
     for i in range(200):
         temp_x = np.random.randint(0, img.shape[0])
         temp_y = np.random.randint(0, img.shape[1])
@@ -91,7 +106,6 @@ def creat_dataset(image_sets, img_w, img_h, image_num=600, mode='augment'):
             random_width = random.randint(0, X_width - img_w - 1)
             random_height = random.randint(0, X_height - img_h - 1)
             src_roi = src_img[random_height: random_height + img_h, random_width: random_width + img_w, :]
-            #src_roi = src_img
             if is_damaged(src_roi):
                  continue
             if mode == 'augment':

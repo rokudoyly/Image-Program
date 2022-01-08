@@ -5,6 +5,8 @@ import random
 
 # Split dataset. It will create new folder to save the dataset.
 def mkfile(file):
+    """ Judge if a file exists. If not, create a new.
+    """
     if not os.path.exists(file):
         os.makedirs(file)
 
