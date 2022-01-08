@@ -2,8 +2,9 @@
 ### ATTENTION:
 For the class MIMZ03 final project.  **DO NOT** include all the code in my project. 
 
+```text
 ![decription](https://img.shields.io/badge/tools-pycharm-blue) ![decription](https://img.shields.io/badge/tools-jupyter-blue)
-
+```
 
 **Clone the Code Repository**
 
@@ -56,6 +57,8 @@ python crawling.py
 ```python
 python crawling_pooling.py
 ```
+
+**Paper information analysis (ICLR 2021) in** `visual_ICLR_2021.ipynb`.
 
 ## images
 
