@@ -1,6 +1,6 @@
 # FINAL PROJECT FOR MIMZ03
-### ATTENTION:
-For the class MIMZ03 final project.  **DO NOT** include all the code in my project. 
+<!-- ### ATTENTION:
+For the class MIMZ03 final project.  **DO NOT** include all the code in my project.  -->
 
 
 ![decription](https://img.shields.io/badge/tools-pycharm-blue) ![decription](https://img.shields.io/badge/tools-jupyter-blue)
@@ -9,7 +9,7 @@ For the class MIMZ03 final project.  **DO NOT** include all the code in my proje
 **Clone the Code Repository**
 
 ```python
-git clone https://github.com/rokudoyly/mimz03.git
+git clone https://github.com/rokudoyly/Image-Program.git
 ```
 
 # Classification
