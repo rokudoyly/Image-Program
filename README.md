@@ -1,7 +1,7 @@
-# FINAL PROJECT FOR MIMZ03
+<!-- # FINAL PROJECT FOR MIMZ03 -->
 <!-- ### ATTENTION:
 For the class MIMZ03 final project.  **DO NOT** include all the code in my project.  -->
-
+# Several programs during my daily studying.
 
 ![decription](https://img.shields.io/badge/tools-pycharm-blue) ![decription](https://img.shields.io/badge/tools-jupyter-blue)
 
